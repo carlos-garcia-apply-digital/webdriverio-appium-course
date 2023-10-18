@@ -4,13 +4,13 @@ import deleteNoteScreen from "../../screen-objects/android/delete-note.screen";
 describe('Delete Notes', () => {
     before('Skip tutorial and create note', async() => {
         await addNoteScreen.skipTutorial();
-        await addNoteScreen.addNote("Fav Anime List", "Jojo's\nCastlevania\nGoblin Slayer\nDemon Slayer");
+        await addNoteScreen.addNote("Anime List", "Jojo's\nCastlevania\nGoblin Slayer\nDemon Slayer");
     })
     
     it('Delete note', async() => {
         
         await deleteNoteScreen.deleteNote();
-        await deleteNoteScreen.confirmDeletion("Fav Anime List");
+        await deleteNoteScreen.confirmDeletion("Anime List");
         
     })
 })
